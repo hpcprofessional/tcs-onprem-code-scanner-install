@@ -1,11 +1,11 @@
 # tcs-onprem-code-scanner-install
-Helpful scripts for those who want to get started using the Tenable.cs OnPrem Code Scanner
+Helpful scripts for those who want to get started using the Tenable.cs On-premise Code Scanner
 
 This is only useful if you have access to *[Tenable Cloud Security](https://www.tenable.com/products/tenable-cs)*.
 
 ## Overview
 
-The Tenable.cs OnPrem Code Scanner is useful if you have an on-prem (not SaaS) Git-based VCS tool.
+The Tenable.cs OnPrem Code Scanner is useful if you have an on-prem (not SaaS) Git-based VCS tool containing Infrastructure as Code you wish to scan with Tenable.cs.
 
 ## Expected Process
 
@@ -20,7 +20,7 @@ The Tenable.cs OnPrem Code Scanner is useful if you have an on-prem (not SaaS) G
 
 ## Troubleshooting
 
-1. In some cases, the port may not be open as expeccted. You might try port 9020. 
+1. In some cases, the port may not be open as expected. You might try port 9020. 
 2. If nether the suggested port nor 9020 works, either of these two methods should show you the open ports on your Ubuntu VM
 
     * `sudo ss -tulpn`
