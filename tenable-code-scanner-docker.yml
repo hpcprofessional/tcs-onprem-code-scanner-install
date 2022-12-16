@@ -1,0 +1,45 @@
+---
+  - name: Installing Tenable.cs On-premise code scanner on Ubuntu Jammy
+    hosts: localhost
+    connection: local
+    become: yes
+    become_user: root
+
+    tasks:
+
+    - name: Install aptitude
+      apt:
+        name: aptitude
+        state: latest
+        update_cache: true
+
+    - name: Install required packages
+      apt:
+        pkg:
+          - docker.io
+          - unzip
+          - docker-compose
+        state: latest
+        update_cache: true
+
+    - name: Install optional packages
+      apt:
+        pkg:
+          - net-tools
+        state: latest
+        update_cache: true
+
+    - name: Extract On-premise code scanner zip file
+      ansible.builtin.unarchive:
+        src: ./tenable-code-scanner-docker.zip
+        dest: ./
+        remote_src: yes
+
+    - name: Fix permissions of tenable-cs-code-scanner
+      ansible.builtin.file:
+        path: ./tenable-cs-code-scanner
+        mode: '0755'
+      
+    - name: "Prereqs are all installed. Now run 'sudo ./tenable-cs-code-scaner'"
+      ansible.builtin.debug: 
+        msg: "Prereqs are all installed. Now run 'sudo ./tenable-cs-code-scaner'"
