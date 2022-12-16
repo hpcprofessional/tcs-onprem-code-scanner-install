@@ -2,6 +2,7 @@
 Helpful scripts for those who want to get started using the Tenable.cs On-premise Code Scanner
 
 This is only useful if you have access to *[Tenable Cloud Security](https://www.tenable.com/products/tenable-cs)*.
+See also the [Use an On-Premise Code Scanner](https://docs.tenable.com/tenablecs/Content/Administration/Integrations/OnPremisesCodeScanner/On-premises-Bot.htm) portion of the Tenable Documentation.
 
 ## Overview
 
